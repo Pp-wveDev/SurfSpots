@@ -51,7 +51,8 @@ INSTALLED_APPS = [
     'drf_yasg',
     
     # Apps
-    'SurfSpotsAPI'
+    'SurfSpotsAPI',
+    'SurfSpotsWeb',
 ]
 
 MIDDLEWARE = [
