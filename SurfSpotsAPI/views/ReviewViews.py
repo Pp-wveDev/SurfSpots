@@ -53,10 +53,11 @@ class ReviewBasic(APIView):
         
         if spot: # Spot found
             if serializer.is_valid(): # Correct review
+                # Save review in spot
                 spot.reviewList.append(serializer.save())
                 spot.save()
                 
-                # Save spot on User.reviews_made
+                # Save spot in User.reviews_made
                 if spot not in serializer.instance.user_author.reviews_made:
                     serializer.instance.user_author.reviews_made.append(spot)
                     serializer.instance.user_author.save()
