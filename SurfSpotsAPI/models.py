@@ -3,11 +3,11 @@ from django.db import models
 from mongoengine import Document, fields, EmbeddedDocument, PULL, CASCADE
 
 class User(Document):
-    username = fields.StringField(required=True, max_length=30)
+    username = fields.StringField(required=True, max_length=30, unique=True)
     email = fields.EmailField(required=True)
     name = fields.StringField(max_length=50)
     password = fields.StringField(required=True)
-    bio = fields.StringField(max_length=500)
+    bio = fields.StringField(max_length=100)
     
     # References
     reviews_made = fields.ListField(fields.ReferenceField('Spot'))
