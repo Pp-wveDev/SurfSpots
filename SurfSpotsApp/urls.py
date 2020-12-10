@@ -40,8 +40,9 @@ urlpatterns = [
     
     # Apps
     path('', include('SurfSpotsAPI.urls')),
+    path('', include('SurfSpotsWeb.urls')),
     
     # OpenAPI
-    path('', schema_view.with_ui('swagger',
+    path('api/', schema_view.with_ui('swagger',
                                  cache_timeout=0), name="schema-swagger-ui"),
 ]
