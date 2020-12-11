@@ -8,4 +8,5 @@ urlpatterns = [
     path('user/<str:pk>/delete', delete_User, name="deleteUser"),
     path('user/<str:pk>/update', update_User, name="updateUser"),
     path('newUser/', create_User, name="createUser"),
+    path('map/', load_Map, name="loadMap")
 ]
