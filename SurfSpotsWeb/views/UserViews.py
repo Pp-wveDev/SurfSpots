@@ -61,3 +61,6 @@ def create_User(request):
     context = {'form': form}
     
     return render(request, 'userCreate.html', context)
+
+def load_Map(request):
+    return render(request, 'map.html')
